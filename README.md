@@ -25,7 +25,7 @@ Q: How Do I run the app?
 A: run $ docker-compose build && docker-compose up -d 
 
 Q: Run testing?
-A: $ docker-compose exec app pytest .
+A: $ docker-compose exec app python -m pytest .
 
 Q: How Do I know if the application is working at all or How do I check endpoints and validations?
 A: By accessing the endpoints on OpenAPI generated pages on localhost.
