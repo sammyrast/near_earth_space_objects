@@ -19,7 +19,7 @@ Implementation:
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-SOLUTION
+# SOLUTION
 
 Q: How Do I run the app?
 A: run $ docker-compose build && docker-compose up -d 
@@ -31,7 +31,7 @@ Q: How Do I know if the application is working at all or How do I check endpoint
 A: By accessing the endpoints on OpenAPI generated pages on localhost.
 
 
-### My Solution TODO: REMOVE THIS SECTION ONCE git pushed
+### My Solution
 1. Register on nasa site
 2. Find out which data they are talking about think how to extract it.
 3. Create a FastAPI application with just one file
@@ -41,3 +41,7 @@ A: By accessing the endpoints on OpenAPI generated pages on localhost.
 7. Create a seperate modules namely models to represent the data type with PyDantic.
 8. Write tests inside of tests/ folder - use PyTest
 9. Test it out and if it works add a picture on this README and a video loaded to git repo.
+
+### TODOs & Improvement Ideas
+A. Expand on unit testing.
+B. Maybe add redis for robust caching.
