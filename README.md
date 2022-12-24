@@ -45,3 +45,4 @@ A: By accessing the endpoints on OpenAPI generated pages on localhost. Besides t
 ### TODOs & Improvement Ideas
 A. Expand on unit testing.
 B. Maybe add redis for robust caching.
+C. Most importantly I am not sure how I extracted the data from the nasa api (If I did it correctly or not , this might need further investigations)...
