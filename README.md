@@ -30,6 +30,8 @@ A: $ docker-compose exec app python -m pytest .
 Q: How Do I know if the application is working at all or How do I check endpoints and validations?
 A: By accessing the endpoints on OpenAPI generated pages on localhost. Besides there's a health check command on docker-compose..
 
+Q: I would like to see how it all work briefly?
+A: Please check out the video associated with the running of the app.
 
 ### My Solution
 1. Register on nasa site
