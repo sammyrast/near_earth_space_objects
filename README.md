@@ -1,4 +1,4 @@
-TASK
+# TASK
 
 Create a simple Python web application with a single REST endpoint that takes two date arguments and retrieves the list of near-Earth space objects approaching Earth in that time interval. Output the list of the objects, sorted by their closest approach distance, containing  the object name, size estimate, time and distance of the closest encounter.
 
@@ -28,14 +28,14 @@ Q: Run testing?
 A: $ docker-compose exec app python -m pytest .
 
 Q: How Do I know if the application is working at all or How do I check endpoints and validations?
-A: By accessing the endpoints on OpenAPI generated pages on localhost.
+A: By accessing the endpoints on OpenAPI generated pages on localhost. Besides there's a health check command on docker-compose..
 
 
 ### My Solution
 1. Register on nasa site
-2. Find out which data they are talking about think how to extract it.
-3. Create a FastAPI application with just one file
-4. docker-compose and dockerfile . docker-compose should have 2 services -> redis and the fastapi framework itself.
+2. Find out which data we are dealing with and think how to extract it.
+3. Create a FastAPI application with just one file.
+4. docker-compose and dockerfile . docker-compose should have 2 services -> redis and the fastapi framework itself( atlast I used lru_cache for simplicty)
 5. Create requirements.txt 
 6. Create a seperate module which will connect to nasa api and extract the data.
 7. Create a seperate modules namely models to represent the data type with PyDantic.
