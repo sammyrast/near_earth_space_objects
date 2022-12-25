@@ -30,6 +30,8 @@ A: $ docker-compose exec app python -m pytest .
 Q: How Do I know if the application is working at all or How do I check endpoints and validations?
 A: By accessing the endpoints on OpenAPI generated pages on localhost. Besides there's a health check command on docker-compose..
 
+Q: I would like to see how it all work briefly?
+A: Please check out the video associated with the running of the app.
 
 ### My Solution
 1. Register on nasa site
@@ -40,7 +42,7 @@ A: By accessing the endpoints on OpenAPI generated pages on localhost. Besides t
 6. Create a seperate module which will connect to nasa api and extract the data.
 7. Create a seperate modules namely models to represent the data type with PyDantic.
 8. Write tests inside of tests/ folder - use PyTest
-9. Test it out and if it works add a picture on this README and a video loaded to git repo.
+9. Test it out and if it works add a video loaded to git repo for more clarity.
 
 ### TODOs & Improvement Ideas
 A. Expand on unit testing.
