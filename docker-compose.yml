@@ -17,4 +17,7 @@ services:
     #   sh -c "pytest tests/"
     restart: unless-stopped
 
+  redis:
+    image: redis:7-alpine
+
   

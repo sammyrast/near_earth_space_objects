@@ -48,3 +48,20 @@ A: Please check out the video associated with the running of the app.
 A. Expand on unit testing.
 B. Maybe add redis for robust caching.
 C. Most importantly I am not sure how I extracted the data from the nasa api (If I did it correctly or not , this might need further investigations)...
+
+### Corrections 
+1. App isn't able to handle intervals larger than 7 days (this was mentioned in the task description). Server responds with 500 Internal Server Error in such cases.
+-> Possible solution : 1. check if the interval is larger than 7 days , if yes make request first to the range 6 days interval and then add the remaining interval . For example if we have 9 days interval . first I will check for 6 days data and then make another request for 3 days data. 
+-> Possible solution: 2. maybe update the x-RATE if possible , check github 
+
+2. Result only contains near-Earth objects from 2 days -- start_date and end_date, but the days inbetween are missing. For example if I ask for objects from 2022-12-12 to 2022-12-15, the result only contains asteroids for these 2 dates, but not for dates 2022-12-13 and 2022-12-14.
+-> **Possible solution: Iterate through the interval or check docs/forums how it really works again. CORRECTION: I was not considering the dates between the ranges , now all dates in the range are covered.**
+
+3. Sorting based on the distance doesn't work.
+-> **Possible solution: After filtering the relevant data based on #4 try to check the sorting of the data based on the distance.CORRECTION: Now data is sorted by distance.**
+
+4. There is no filtering out of the irrelevant data. This might not be clear from the task description (I'm sorry if that's the case), but we're interested only in a few attributes -- the object name, size estimate, time and distance of the closest encounter. Other attributes can be ignored and not returned by the endpoint.
+-> **Possible solution: Make use of the pydantic class and read from dictionary data to filter , check it works.CORRECTION: only relevant data is extracted now.**
+
+5. An Http client you're using ('httpx' library) has a default timeout and if this timeout exceeds, the app just logs a warning message, but the endpoint returns 'null' as response.
+-> **Possible solution: check the default timeout for httpx and update this and also test it out. Updated the default timeout to None.**
